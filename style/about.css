@@ -1,0 +1,185 @@
+/* 
+  #3CBCAD
+  #F18D35
+  #EF5148
+  #3E7BD8
+  #242E34
+  #C6DBE6
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #c6dbe6;
+  background: #171b1d;
+}
+
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+
+.grid:not(:last-child) {
+  margin-bottom: 4.8rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/*************************/
+/* HEADER */
+/*************************/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 9.6rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo-img {
+  width: 8rem;
+}
+
+.logo-text-link {
+  color: #c6dbe6;
+  text-decoration: none;
+  font-size: 3.6rem;
+  font-weight: 600;
+}
+
+.nav-lists {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 2.4rem;
+  color: #c6dbe6;
+}
+
+/*************************/
+/* MAIN */
+/*************************/
+
+.main {
+  padding: 20rem 20rem 0 20rem;
+}
+
+/*************************/
+/* ABOUT SECTION */
+/*************************/
+
+.about-img {
+  width: 45rem;
+}
+
+.about-name {
+  font-size: 4.6rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.about-text {
+  font-size: 2rem;
+  line-height: 1.6;
+}
+
+/*************************/
+/* FORM SECTION */
+/*************************/
+
+.section-form {
+  text-align: center;
+}
+
+.section-form {
+  margin-top: 20rem;
+  padding: 0 30%;
+}
+
+.form-name {
+  font-size: 4.6rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.form-group {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+.form-label {
+  font-size: 1.8rem;
+}
+
+.form-input {
+  padding: 1rem 0;
+  background-color: #c6dbe6;
+}
+
+/*************************/
+/* FOOTER */
+/*************************/
+
+.footer {
+  padding-top: 15rem;
+  text-align: center;
+  border-top: 1px solid #c6dbe6;
+}
+
+.footer-img {
+  width: 15rem;
+}
+
+.social-lists {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  padding-top: 5rem;
+}
+
+.social-icon {
+  font-size: 3rem;
+  fill: #c6dbe6;
+}
+
+.link-lists {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.link-link {
+  text-decoration: none;
+  color: #c6dbe6;
+  font-size: 2.4rem;
+}
