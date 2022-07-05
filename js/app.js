@@ -33,8 +33,8 @@ const welcome = function () {
   }
 
   if (!confirm("Do you want to skip the welcoming message")) {
+    alert(`Hello ${genderValue} ${personName}`);
   }
-  alert(`Hello ${genderValue} ${personName}`);
 };
 welcome();
 
