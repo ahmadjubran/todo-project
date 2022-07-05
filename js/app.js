@@ -117,5 +117,5 @@ const loveMansaf = function () {
 loveMansaf();
 
 console.log(
-  `${personName} ${arr[0]}, ${arr[1]}, ${arr[2]} and he says ${arr[3]}.`
+  `${personName} ${arr[0]}, ${arr[1]}, ${arr[2]} and says ${arr[3]}.`
 );
