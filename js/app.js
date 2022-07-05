@@ -92,7 +92,7 @@ const loveMansaf = function () {
       i++;
     }
   }
-  if (i === 3) {
+  if (i >= 3) {
     alert("Right answer is (mansaf is the best)");
   }
   const question4 = prompt(`*****This is an OPTIONAL question***** 
