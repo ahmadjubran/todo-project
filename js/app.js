@@ -70,10 +70,10 @@ function traverse(array) {
   for (let i = 0; i < arr.length; i++) {
     console.log(array[i]);
   }
+
 }
 
 // Mansaf
-
 // const loveMansaf = function () {
 //   let i = 0;
 //   if (i === 2) {
