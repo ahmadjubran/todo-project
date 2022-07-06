@@ -4,14 +4,18 @@
 
 const personName = prompt("Please enter your name");
 
-const personGender = prompt(`please enter your gender
-  The input should be either (male or female)`);
+const personGender = prompt(
+  `please enter your gender
+  The input should be either (male or female)`
+);
 
 const personAge = function () {
-  const ageValue = prompt(`Please enter your age
+  const ageValue = prompt(
+    `Please enter your age
   (The input should be number
   and the number should be greater than zero)
-  ( ( ( TRY INVALID VALUE ) ) )`);
+  ( ( ( TRY INVALID VALUE ) ) )`
+  );
 
   if (ageValue > 0) {
     return ageValue;
@@ -24,9 +28,9 @@ personAge();
 
 const welcome = function () {
   let genderValue;
-  if (personGender === "male") {
+  if (personGender.toLowerCase() === "male") {
     genderValue = "Mr";
-  } else if (personGender === "female") {
+  } else if (personGender.toLowerCase() === "female") {
     genderValue = "Ms";
   } else {
     genderValue = "";
@@ -42,80 +46,57 @@ welcome();
 
 const arr = [];
 
-const loveHTML = function () {
-  const question1 = prompt("Q1: Do you love HTML (yes or no question)");
+function askQuestion(question, output) {
+  let answer = prompt(question);
 
-  if (question1 === "yes") {
-    arr.push("love HTML");
-  } else if (question1 === "no") {
-    arr.push("doesn't love HTML");
+  if (answer.toLowerCase() === "yes") {
+    arr.push(`love ${output}`);
+  } else if (answer.toLowerCase() === "no") {
+    arr.push(`doesn't love ${output}`);
   } else {
     arr.push("invalid");
   }
-};
-loveHTML();
+}
 
-const loveCSS = function () {
-  const question2 = prompt("Q2: Do you love CSS (yes or no question)");
-
-  if (question2 === "yes") {
-    arr.push("love CSS");
-  } else if (question2 === "no") {
-    arr.push("doesn't love CSS");
-  } else {
-    arr.push("invalid");
-  }
-};
-loveCSS();
-
-const loveJS = function () {
-  const question3 = prompt("Q3: Do you love JS (yes or no question)");
-
-  if (question3 === "yes") {
-    arr.push("love JS");
-  } else if (question3 === "no") {
-    arr.push("doesn't love JS");
-  } else {
-    arr.push("invalid");
-  }
-};
-loveJS();
-
-let i = 0;
-const loveMansaf = function () {
-  if (i === 2) {
-    if (confirm("Do you want to skip this question")) {
-      alert("WRONG ANSWER 🤣🤣");
-      i++;
-    } else {
-      alert("WRONG ANSWER 🤣🤣");
-      i++;
-    }
-  }
-  if (i >= 3) {
-    alert("Right answer is (mansaf is the best)");
-  }
-  const question4 = prompt(`*****This is an OPTIONAL question***** 
-  Q4: Is mansaf good (yes or no question)`);
-
-  if (question4 === "yes") {
-    alert("WRONG ANSWER");
-    i++;
-    loveMansaf();
-  } else if (question4 === "no") {
-    alert("WRONG ANSWER");
-    i++;
-    loveMansaf();
-  } else if (question4 === "mansaf is the best") {
-    arr.push("mansaf is the best");
-  } else {
-    alert("WRONG ANSWER");
-    i++;
-    loveMansaf();
-  }
-};
-loveMansaf();
-
-console.log(
-  `${personName} ${arr[0]}, ${arr[1]}, ${arr[2]} and says ${arr[3]}.`
+const answer1 = askQuestion(
+  "Q1: Do you love HTML (yes or no question)",
+  "HTML"
 );
+const answer2 = askQuestion("Q2: Do you love CSS (yes or no question)", "CSS");
+const answer3 = askQuestion("Q3: Do you love JS (yes or no question)", "JS");
+
+traverse(arr);
+function traverse(array) {
+  for (let i = 0; i < arr.length; i++) {
+    console.log(array[i]);
+  }
+
+}
+
+// Mansaf
+// const loveMansaf = function () {
+//   let i = 0;
+//   if (i === 2) {
+//     if (confirm("Do you want to skip this question")) {
+//       alert("WRONG ANSWER 🤣🤣");
+//       i++;
+//     } else {
+//       alert("WRONG ANSWER 🤣🤣");
+//       i++;
+//     }
+//   }
+//   if (i >= 3) {
+//     alert("Right answer is (mansaf is the best)");
+//   }
+//   const mansaf = prompt(`*****This is an OPTIONAL question*****
+//   Q4: Is mansaf good (yes or no question)`);
+
+//   if (mansaf.toLowerCase() === "mansaf is the best") {
+//     return;
+//   } else {
+//     alert("WRONG ANSWER");
+//     i++;
+//     loveMansaf();
+//   }
+// };
+// loveMansaf();
