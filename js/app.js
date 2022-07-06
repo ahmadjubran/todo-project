@@ -70,33 +70,34 @@ function traverse(array) {
   for (let i = 0; i < arr.length; i++) {
     console.log(array[i]);
   }
-
 }
 
 // Mansaf
-// const loveMansaf = function () {
-//   let i = 0;
-//   if (i === 2) {
-//     if (confirm("Do you want to skip this question")) {
-//       alert("WRONG ANSWER 🤣🤣");
-//       i++;
-//     } else {
-//       alert("WRONG ANSWER 🤣🤣");
-//       i++;
-//     }
-//   }
-//   if (i >= 3) {
-//     alert("Right answer is (mansaf is the best)");
-//   }
-//   const mansaf = prompt(`*****This is an OPTIONAL question*****
-//   Q4: Is mansaf good (yes or no question)`);
 
-//   if (mansaf.toLowerCase() === "mansaf is the best") {
-//     return;
-//   } else {
-//     alert("WRONG ANSWER");
-//     i++;
-//     loveMansaf();
-//   }
-// };
-// loveMansaf();
+let i = 0;
+const loveMansaf = function () {
+  if (i === 2) {
+    if (confirm("Do you want to skip this question")) {
+      alert("WRONG ANSWER 🤣🤣");
+      i++;
+    } else {
+      alert("WRONG ANSWER 🤣🤣");
+      i++;
+    }
+  }
+  if (i === 3) {
+    alert("Right answer is (mansaf is the best)");
+    return;
+  }
+  const mansaf = prompt(`*****This is an OPTIONAL question*****
+  Q4: Is mansaf good?`);
+
+  if (mansaf.toLowerCase() === "mansaf is the best") {
+    return;
+  } else {
+    alert("WRONG ANSWER");
+    i++;
+    loveMansaf();
+  }
+};
+loveMansaf();
